@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<style type="text/css">
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+		}
+		input[type="button"] {
+			width: 50px;
+			height: 50px;
+			font-size: 24px;
+			margin: 5px;
+		}
+		input[type="text"] {
+			width: 212px;
+			height: 50px;
+			font-size: 24px;
+			margin: 5px;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="resultado" disabled><br>
+	<input type="button" value="1" onclick="adicionar('1')">
+	<input type="button" value="2" onclick="adicionar('2')">
+	<input type="button" value="3" onclick="adicionar('3')">
+	<input type="button" value="/" onclick="adicionar('/')"><br>
+	<input type="button" value="4" onclick="adicionar('4')">
+	<input type="button" value="5" onclick="adicionar('5')">
+	<input type="button" value="6" onclick="adicionar('6')">
+	<input type="button" value="-" onclick="adicionar('-')"><br>
+	<input type="button" value="7" onclick="adicionar('7')">
+	<input type="button" value="8" onclick="adicionar('8')">
+	<input type="button" value="9" onclick="adicionar('9')">
+	<input type="button" value="+" onclick="adicionar('+')"><br>
+    <input type='button' value='0' onclick='adicionar("0")'>
+    <input type='button' value='.' onclick='adicionar(".")'>
+    <input type='button' value='*' onclick='adicionar("*")'>
+    <input type='button' value='-' onclick='adicionar("-")'><br>
+    <input type='button' value='C' onclick='limpar()'>
+    <input type='button' value='=' onclick='calcular()'><br>
+
+<script type='text/javascript'>
+	function adicionar(valor) {
+	    document.getElementById("resultado").value += valor;
+    }
+
+    function limpar() {
+        document.getElementById("resultado").value = "";
+    }
+
+    function calcular() {
+        var resultado = eval(document.getElementById("resultado").value);
+        document.getElementById("resultado").value = resultado;
+    }
+</script>
+
+</body>
+</html>
+

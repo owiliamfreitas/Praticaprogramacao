@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<HTML>
+    <header>
+    
+        <TITLE>JavaScript</TITLE>
+        <meta charset="UTF-8" />
+
+        <script>
+
+            function Somar(){
+               const n1 =  document.getElementById('n1').value
+               const n2 =  document.getElementById('n2').value
+               
+
+               const soma = Number (n1) + Number (n2)
+            
+
+               const resultado =  document.getElementById('resultado')
+
+               resultado.innerHTML = "A soma dos números é " + soma
+              
+                
+            }
+            function calcular() {
+        var resultado = eval(document.getElementById("resultado").value);
+        document.getElementById("resultado").value = resultado;
+    }
+
+
+
+        </script>
+    </header>
+    <body>
+
+        <form action="">
+
+            N1: <input type="text" id="n1"/><br>
+            N2: <input type="text" id="n2"/><br>
+
+            <input type="button" value="Somar"  onclick="Somar()" >
+            <input type="button" value="Subtrair"  onclick="Subtrair()" >
+            <input type="button" value="multiplicar"  onclick="Multiplicar()" >
+            <input type="button" value="dividir"  onclick="Dividir()" >
+            
+
+            <h1 id="resultado">O resultado é </h1>
+
+
+
+        </form>
+    </body>
+</HTML>
